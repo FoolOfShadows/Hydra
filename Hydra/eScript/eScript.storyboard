@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.59" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="Pbr-Lx-Ylb">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.59"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ScriptVC-->
+        <scene sceneID="dmE-L0-RiK">
+            <objects>
+                <viewController id="Pbr-Lx-Ylb" customClass="eScriptVC" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="WPy-Ak-ihW">
+                        <rect key="frame" x="0.0" y="0.0" width="442" height="524"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZDc-Pk-3td">
+                                <rect key="frame" x="332" y="13" width="96" height="32"/>
+                                <buttonCell key="cell" type="push" title="Proccess" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pRD-uz-rHs">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="processPFData:" target="Pbr-Lx-Ylb" id="zRQ-OK-5Zx"/>
+                                </connections>
+                            </button>
+                            <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgb-Ay-QSk">
+                                <rect key="frame" x="20" y="94" width="402" height="410"/>
+                                <clipView key="contentView" drawsBackground="NO" id="htv-4i-2qF">
+                                    <rect key="frame" x="1" y="1" width="385" height="408"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="bOC-pN-Fof">
+                                            <rect key="frame" x="0.0" y="0.0" width="385" height="408"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <size key="minSize" width="385" height="408"/>
+                                            <size key="maxSize" width="463" height="10000000"/>
+                                            <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                        </textView>
+                                    </subviews>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="7mp-cu-lIl">
+                                    <rect key="frame" x="-100" y="-100" width="87" height="18"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="c71-jm-Bf7">
+                                    <rect key="frame" x="386" y="1" width="15" height="408"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="823-F1-4Un">
+                                <rect key="frame" x="238" y="13" width="94" height="32"/>
+                                <buttonCell key="cell" type="push" title="Save File" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3tk-7a-Hsr">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="saveFile:" target="Pbr-Lx-Ylb" id="hAD-Ah-Ixa"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-cg-aZb">
+                                <rect key="frame" x="272" y="46" width="156" height="32"/>
+                                <buttonCell key="cell" type="push" title="Add Another Script" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ViQ-dv-PsI">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addScript:" target="Pbr-Lx-Ylb" id="0lG-LC-6Y6"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="55o-Wu-jof">
+                                <rect key="frame" x="105" y="13" width="133" height="32"/>
+                                <buttonCell key="cell" type="push" title="Add Visit Dates" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="jrB-m3-qie">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addVisitDates:" target="Pbr-Lx-Ylb" id="KXD-ZL-3dl"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVW-ns-Ndj">
+                                <rect key="frame" x="17" y="46" width="75" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2xh-eI-f9Q">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="dismissController:" target="Pbr-Lx-Ylb" id="uQN-KE-cdv"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="ZDc-Pk-3td" secondAttribute="bottom" constant="20" id="0Pd-sY-9q9"/>
+                            <constraint firstItem="823-F1-4Un" firstAttribute="leading" secondItem="55o-Wu-jof" secondAttribute="trailing" constant="12" id="0aC-1v-hmu"/>
+                            <constraint firstAttribute="bottom" secondItem="823-F1-4Un" secondAttribute="bottom" constant="20" id="1hY-Cz-wrH"/>
+                            <constraint firstItem="ZDc-Pk-3td" firstAttribute="leading" secondItem="823-F1-4Un" secondAttribute="trailing" constant="12" id="CfK-Xc-R1C"/>
+                            <constraint firstAttribute="trailing" secondItem="aHA-cg-aZb" secondAttribute="trailing" constant="20" id="F9Q-4p-y38"/>
+                            <constraint firstItem="ZDc-Pk-3td" firstAttribute="top" secondItem="aHA-cg-aZb" secondAttribute="bottom" constant="12" id="Hzw-eg-iNh"/>
+                            <constraint firstItem="aHA-cg-aZb" firstAttribute="top" secondItem="Vgb-Ay-QSk" secondAttribute="bottom" constant="20" id="OEN-pp-yFC"/>
+                            <constraint firstItem="Vgb-Ay-QSk" firstAttribute="leading" secondItem="WPy-Ak-ihW" secondAttribute="leading" constant="20" id="YzP-YZ-YH6"/>
+                            <constraint firstAttribute="trailing" secondItem="ZDc-Pk-3td" secondAttribute="trailing" constant="20" id="ZXR-4g-ul5"/>
+                            <constraint firstAttribute="bottom" secondItem="55o-Wu-jof" secondAttribute="bottom" constant="20" id="drU-qf-juC"/>
+                            <constraint firstItem="Vgb-Ay-QSk" firstAttribute="top" secondItem="WPy-Ak-ihW" secondAttribute="top" constant="20" id="eHs-3P-Qop"/>
+                            <constraint firstAttribute="trailing" secondItem="Vgb-Ay-QSk" secondAttribute="trailing" constant="20" id="grF-E6-gro"/>
+                            <constraint firstItem="55o-Wu-jof" firstAttribute="leading" secondItem="WPy-Ak-ihW" secondAttribute="leading" constant="111" id="j8C-qU-66c"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="scriptText" destination="bOC-pN-Fof" id="clA-Q2-0yu"/>
+                    </connections>
+                </viewController>
+                <customObject id="fbq-o6-S47" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="765" y="642"/>
+        </scene>
+    </scenes>
+</document>

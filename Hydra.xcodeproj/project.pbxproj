@@ -8,11 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		79FAF5DB220B2C3800A52D93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF5DA220B2C3800A52D93 /* AppDelegate.swift */; };
-		79FAF5DD220B2C3800A52D93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF5DC220B2C3800A52D93 /* ViewController.swift */; };
+		79FAF5DD220B2C3800A52D93 /* HydraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF5DC220B2C3800A52D93 /* HydraVC.swift */; };
 		79FAF5DF220B2C3A00A52D93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF5DE220B2C3A00A52D93 /* Assets.xcassets */; };
 		79FAF5E2220B2C3A00A52D93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF5E0220B2C3A00A52D93 /* Main.storyboard */; };
 		79FAF5EE220B2C3A00A52D93 /* HydraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF5ED220B2C3A00A52D93 /* HydraTests.swift */; };
 		79FAF5F9220B2C3A00A52D93 /* HydraUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF5F8220B2C3A00A52D93 /* HydraUITests.swift */; };
+		79FAF609220B2DB700A52D93 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF606220B2DB700A52D93 /* StringExtensions.swift */; };
+		79FAF60A220B2DB700A52D93 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF607220B2DB700A52D93 /* Buttons.swift */; };
+		79FAF60B220B2DB700A52D93 /* GeneralExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF608220B2DB700A52D93 /* GeneralExtensions.swift */; };
+		79FAF611220B2DCF00A52D93 /* PMCurrentMedsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF60C220B2DCF00A52D93 /* PMCurrentMedsController.swift */; };
+		79FAF612220B2DCF00A52D93 /* PM Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF60D220B2DCF00A52D93 /* PM Constants.swift */; };
+		79FAF613220B2DCF00A52D93 /* Phone Message Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF60E220B2DCF00A52D93 /* Phone Message Model.swift */; };
+		79FAF614220B2DCF00A52D93 /* PMSymptomsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF60F220B2DCF00A52D93 /* PMSymptomsController.swift */; };
+		79FAF615220B2DCF00A52D93 /* PhoneMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF610220B2DCF00A52D93 /* PhoneMessageVC.swift */; };
+		79FAF619220B2EC800A52D93 /* PhoneMessage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF617220B2EC800A52D93 /* PhoneMessage.storyboard */; };
+		79FAF61D220B33FB00A52D93 /* eSConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF61A220B33FB00A52D93 /* eSConstants.swift */; };
+		79FAF61E220B33FB00A52D93 /* eSFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF61B220B33FB00A52D93 /* eSFunctions.swift */; };
+		79FAF61F220B33FB00A52D93 /* eScriptVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF61C220B33FB00A52D93 /* eScriptVC.swift */; };
+		79FAF622220B345000A52D93 /* eScript.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF621220B345000A52D93 /* eScript.storyboard */; };
+		79FAF624220B354500A52D93 /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF623220B354500A52D93 /* CommonFunctions.swift */; };
+		79FAF629220B36A900A52D93 /* LabsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF626220B36A900A52D93 /* LabsModel.swift */; };
+		79FAF62A220B36A900A52D93 /* LabSetUpPrintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF627220B36A900A52D93 /* LabSetUpPrintViewController.swift */; };
+		79FAF62B220B36A900A52D93 /* LabsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF628220B36A900A52D93 /* LabsViewController.swift */; };
+		79FAF62E220B377900A52D93 /* Labs.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF62C220B377900A52D93 /* Labs.storyboard */; };
+		79FAF635220B3B3500A52D93 /* TaskPickerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF62F220B3B3500A52D93 /* TaskPickerModel.swift */; };
+		79FAF636220B3B3500A52D93 /* criteriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF630220B3B3500A52D93 /* criteriaViewController.swift */; };
+		79FAF637220B3B3500A52D93 /* TaskPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF631220B3B3500A52D93 /* TaskPickerViewController.swift */; };
+		79FAF638220B3B3500A52D93 /* resultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF632220B3B3500A52D93 /* resultsViewController.swift */; };
+		79FAF639220B3B3500A52D93 /* DataProcessingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF633220B3B3500A52D93 /* DataProcessingModel.swift */; };
+		79FAF63A220B3B3500A52D93 /* VisitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF634220B3B3500A52D93 /* VisitData.swift */; };
+		79FAF640220B3EC800A52D93 /* PTVNScraper.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF63E220B3EC800A52D93 /* PTVNScraper.storyboard */; };
+		79FAF642220B3F8300A52D93 /* URLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF641220B3F8200A52D93 /* URLExtensions.swift */; };
+		79FAF644220B3F8A00A52D93 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF643220B3F8A00A52D93 /* ViewExtensions.swift */; };
+		79FAF64C220B3FAB00A52D93 /* NoteMedsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF645220B3FAA00A52D93 /* NoteMedsVC.swift */; };
+		79FAF64D220B3FAB00A52D93 /* BuilderConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF646220B3FAA00A52D93 /* BuilderConstants.swift */; };
+		79FAF64E220B3FAB00A52D93 /* AssessmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF647220B3FAA00A52D93 /* AssessmentModel.swift */; };
+		79FAF64F220B3FAB00A52D93 /* PF Summary.png in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF648220B3FAA00A52D93 /* PF Summary.png */; };
+		79FAF650220B3FAB00A52D93 /* BuilderInterfaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF649220B3FAB00A52D93 /* BuilderInterfaceVC.swift */; };
+		79FAF651220B3FAB00A52D93 /* ChartData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF64A220B3FAB00A52D93 /* ChartData.swift */; };
+		79FAF652220B3FAB00A52D93 /* Ellipsis.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF64B220B3FAB00A52D93 /* Ellipsis.jpg */; };
+		79FAF655220B420300A52D93 /* Builder.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF654220B420300A52D93 /* Builder.storyboard */; };
+		79FAF659220B42F000A52D93 /* ScriptCalculatorWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF656220B42F000A52D93 /* ScriptCalculatorWindow.swift */; };
+		79FAF65A220B42F000A52D93 /* ScriptCalculatorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF657220B42F000A52D93 /* ScriptCalculatorVC.swift */; };
+		79FAF65B220B42F000A52D93 /* ScriptDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF658220B42F000A52D93 /* ScriptDataModel.swift */; };
+		79FAF65F220B45DD00A52D93 /* ScriptCalculator.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF65D220B45DD00A52D93 /* ScriptCalculator.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +74,7 @@
 /* Begin PBXFileReference section */
 		79FAF5D7220B2C3800A52D93 /* Hydra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hydra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FAF5DA220B2C3800A52D93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79FAF5DC220B2C3800A52D93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79FAF5DC220B2C3800A52D93 /* HydraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydraVC.swift; sourceTree = "<group>"; };
 		79FAF5DE220B2C3A00A52D93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79FAF5E1220B2C3A00A52D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79FAF5E3220B2C3A00A52D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +85,45 @@
 		79FAF5F4220B2C3A00A52D93 /* HydraUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HydraUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FAF5F8220B2C3A00A52D93 /* HydraUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydraUITests.swift; sourceTree = "<group>"; };
 		79FAF5FA220B2C3A00A52D93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79FAF606220B2DB700A52D93 /* StringExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		79FAF607220B2DB700A52D93 /* Buttons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		79FAF608220B2DB700A52D93 /* GeneralExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneralExtensions.swift; sourceTree = "<group>"; };
+		79FAF60C220B2DCF00A52D93 /* PMCurrentMedsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMCurrentMedsController.swift; sourceTree = "<group>"; };
+		79FAF60D220B2DCF00A52D93 /* PM Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PM Constants.swift"; sourceTree = "<group>"; };
+		79FAF60E220B2DCF00A52D93 /* Phone Message Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Phone Message Model.swift"; sourceTree = "<group>"; };
+		79FAF60F220B2DCF00A52D93 /* PMSymptomsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PMSymptomsController.swift; sourceTree = "<group>"; };
+		79FAF610220B2DCF00A52D93 /* PhoneMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneMessageVC.swift; sourceTree = "<group>"; };
+		79FAF618220B2EC800A52D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Hydra/Base.lproj/PhoneMessage.storyboard; sourceTree = "<group>"; };
+		79FAF61A220B33FB00A52D93 /* eSConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eSConstants.swift; sourceTree = "<group>"; };
+		79FAF61B220B33FB00A52D93 /* eSFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eSFunctions.swift; sourceTree = "<group>"; };
+		79FAF61C220B33FB00A52D93 /* eScriptVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eScriptVC.swift; sourceTree = "<group>"; };
+		79FAF621220B345000A52D93 /* eScript.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = eScript.storyboard; sourceTree = "<group>"; };
+		79FAF623220B354500A52D93 /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		79FAF626220B36A900A52D93 /* LabsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabsModel.swift; sourceTree = "<group>"; };
+		79FAF627220B36A900A52D93 /* LabSetUpPrintViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabSetUpPrintViewController.swift; sourceTree = "<group>"; };
+		79FAF628220B36A900A52D93 /* LabsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabsViewController.swift; sourceTree = "<group>"; };
+		79FAF62D220B377900A52D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Hydra/Base.lproj/Labs.storyboard; sourceTree = "<group>"; };
+		79FAF62F220B3B3500A52D93 /* TaskPickerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPickerModel.swift; sourceTree = "<group>"; };
+		79FAF630220B3B3500A52D93 /* criteriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = criteriaViewController.swift; sourceTree = "<group>"; };
+		79FAF631220B3B3500A52D93 /* TaskPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskPickerViewController.swift; sourceTree = "<group>"; };
+		79FAF632220B3B3500A52D93 /* resultsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = resultsViewController.swift; sourceTree = "<group>"; };
+		79FAF633220B3B3500A52D93 /* DataProcessingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataProcessingModel.swift; sourceTree = "<group>"; };
+		79FAF634220B3B3500A52D93 /* VisitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisitData.swift; sourceTree = "<group>"; };
+		79FAF63F220B3EC800A52D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Hydra/Base.lproj/PTVNScraper.storyboard; sourceTree = "<group>"; };
+		79FAF641220B3F8200A52D93 /* URLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLExtensions.swift; sourceTree = "<group>"; };
+		79FAF643220B3F8A00A52D93 /* ViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		79FAF645220B3FAA00A52D93 /* NoteMedsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteMedsVC.swift; sourceTree = "<group>"; };
+		79FAF646220B3FAA00A52D93 /* BuilderConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderConstants.swift; sourceTree = "<group>"; };
+		79FAF647220B3FAA00A52D93 /* AssessmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssessmentModel.swift; sourceTree = "<group>"; };
+		79FAF648220B3FAA00A52D93 /* PF Summary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PF Summary.png"; sourceTree = "<group>"; };
+		79FAF649220B3FAB00A52D93 /* BuilderInterfaceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BuilderInterfaceVC.swift; sourceTree = "<group>"; };
+		79FAF64A220B3FAB00A52D93 /* ChartData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChartData.swift; sourceTree = "<group>"; };
+		79FAF64B220B3FAB00A52D93 /* Ellipsis.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Ellipsis.jpg; sourceTree = "<group>"; };
+		79FAF654220B420300A52D93 /* Builder.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Builder.storyboard; sourceTree = "<group>"; };
+		79FAF656220B42F000A52D93 /* ScriptCalculatorWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptCalculatorWindow.swift; sourceTree = "<group>"; };
+		79FAF657220B42F000A52D93 /* ScriptCalculatorVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptCalculatorVC.swift; sourceTree = "<group>"; };
+		79FAF658220B42F000A52D93 /* ScriptDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScriptDataModel.swift; sourceTree = "<group>"; };
+		79FAF65E220B45DD00A52D93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Hydra/Base.lproj/ScriptCalculator.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,12 +174,24 @@
 		79FAF5D9220B2C3800A52D93 /* Hydra */ = {
 			isa = PBXGroup;
 			children = (
-				79FAF5DA220B2C3800A52D93 /* AppDelegate.swift */,
-				79FAF5DC220B2C3800A52D93 /* ViewController.swift */,
-				79FAF5DE220B2C3A00A52D93 /* Assets.xcassets */,
 				79FAF5E0220B2C3A00A52D93 /* Main.storyboard */,
+				79FAF5DA220B2C3800A52D93 /* AppDelegate.swift */,
+				79FAF5DC220B2C3800A52D93 /* HydraVC.swift */,
+				79FAF616220B2DDE00A52D93 /* Phone Messages */,
+				79FAF620220B340300A52D93 /* eScript */,
+				79FAF625220B36A900A52D93 /* Lab */,
+				79FAF63B220B3B3C00A52D93 /* PTVN Scraper */,
+				79FAF653220B3FB400A52D93 /* PTVN Builder */,
+				79FAF65C220B42F700A52D93 /* Script Calculator */,
+				79FAF5DE220B2C3A00A52D93 /* Assets.xcassets */,
 				79FAF5E3220B2C3A00A52D93 /* Info.plist */,
 				79FAF5E4220B2C3A00A52D93 /* Hydra.entitlements */,
+				79FAF607220B2DB700A52D93 /* Buttons.swift */,
+				79FAF608220B2DB700A52D93 /* GeneralExtensions.swift */,
+				79FAF606220B2DB700A52D93 /* StringExtensions.swift */,
+				79FAF641220B3F8200A52D93 /* URLExtensions.swift */,
+				79FAF643220B3F8A00A52D93 /* ViewExtensions.swift */,
+				79FAF623220B354500A52D93 /* CommonFunctions.swift */,
 			);
 			path = Hydra;
 			sourceTree = "<group>";
@@ -122,6 +212,81 @@
 				79FAF5FA220B2C3A00A52D93 /* Info.plist */,
 			);
 			path = HydraUITests;
+			sourceTree = "<group>";
+		};
+		79FAF616220B2DDE00A52D93 /* Phone Messages */ = {
+			isa = PBXGroup;
+			children = (
+				79FAF617220B2EC800A52D93 /* PhoneMessage.storyboard */,
+				79FAF60D220B2DCF00A52D93 /* PM Constants.swift */,
+				79FAF60C220B2DCF00A52D93 /* PMCurrentMedsController.swift */,
+				79FAF610220B2DCF00A52D93 /* PhoneMessageVC.swift */,
+				79FAF60E220B2DCF00A52D93 /* Phone Message Model.swift */,
+				79FAF60F220B2DCF00A52D93 /* PMSymptomsController.swift */,
+			);
+			path = "Phone Messages";
+			sourceTree = "<group>";
+		};
+		79FAF620220B340300A52D93 /* eScript */ = {
+			isa = PBXGroup;
+			children = (
+				79FAF621220B345000A52D93 /* eScript.storyboard */,
+				79FAF61A220B33FB00A52D93 /* eSConstants.swift */,
+				79FAF61B220B33FB00A52D93 /* eSFunctions.swift */,
+				79FAF61C220B33FB00A52D93 /* eScriptVC.swift */,
+			);
+			path = eScript;
+			sourceTree = "<group>";
+		};
+		79FAF625220B36A900A52D93 /* Lab */ = {
+			isa = PBXGroup;
+			children = (
+				79FAF62C220B377900A52D93 /* Labs.storyboard */,
+				79FAF626220B36A900A52D93 /* LabsModel.swift */,
+				79FAF627220B36A900A52D93 /* LabSetUpPrintViewController.swift */,
+				79FAF628220B36A900A52D93 /* LabsViewController.swift */,
+			);
+			path = Lab;
+			sourceTree = "<group>";
+		};
+		79FAF63B220B3B3C00A52D93 /* PTVN Scraper */ = {
+			isa = PBXGroup;
+			children = (
+				79FAF63E220B3EC800A52D93 /* PTVNScraper.storyboard */,
+				79FAF630220B3B3500A52D93 /* criteriaViewController.swift */,
+				79FAF633220B3B3500A52D93 /* DataProcessingModel.swift */,
+				79FAF632220B3B3500A52D93 /* resultsViewController.swift */,
+				79FAF62F220B3B3500A52D93 /* TaskPickerModel.swift */,
+				79FAF631220B3B3500A52D93 /* TaskPickerViewController.swift */,
+				79FAF634220B3B3500A52D93 /* VisitData.swift */,
+			);
+			path = "PTVN Scraper";
+			sourceTree = "<group>";
+		};
+		79FAF653220B3FB400A52D93 /* PTVN Builder */ = {
+			isa = PBXGroup;
+			children = (
+				79FAF654220B420300A52D93 /* Builder.storyboard */,
+				79FAF647220B3FAA00A52D93 /* AssessmentModel.swift */,
+				79FAF649220B3FAB00A52D93 /* BuilderInterfaceVC.swift */,
+				79FAF64A220B3FAB00A52D93 /* ChartData.swift */,
+				79FAF646220B3FAA00A52D93 /* BuilderConstants.swift */,
+				79FAF64B220B3FAB00A52D93 /* Ellipsis.jpg */,
+				79FAF645220B3FAA00A52D93 /* NoteMedsVC.swift */,
+				79FAF648220B3FAA00A52D93 /* PF Summary.png */,
+			);
+			path = "PTVN Builder";
+			sourceTree = "<group>";
+		};
+		79FAF65C220B42F700A52D93 /* Script Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				79FAF65D220B45DD00A52D93 /* ScriptCalculator.storyboard */,
+				79FAF657220B42F000A52D93 /* ScriptCalculatorVC.swift */,
+				79FAF656220B42F000A52D93 /* ScriptCalculatorWindow.swift */,
+				79FAF658220B42F000A52D93 /* ScriptDataModel.swift */,
+			);
+			path = "Script Calculator";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +357,11 @@
 				TargetAttributes = {
 					79FAF5D6220B2C3800A52D93 = {
 						CreatedOnToolsVersion = 10.2;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 					79FAF5E8220B2C3A00A52D93 = {
 						CreatedOnToolsVersion = 10.2;
@@ -228,8 +398,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79FAF652220B3FAB00A52D93 /* Ellipsis.jpg in Resources */,
 				79FAF5DF220B2C3A00A52D93 /* Assets.xcassets in Resources */,
+				79FAF62E220B377900A52D93 /* Labs.storyboard in Resources */,
+				79FAF619220B2EC800A52D93 /* PhoneMessage.storyboard in Resources */,
+				79FAF64F220B3FAB00A52D93 /* PF Summary.png in Resources */,
+				79FAF640220B3EC800A52D93 /* PTVNScraper.storyboard in Resources */,
+				79FAF655220B420300A52D93 /* Builder.storyboard in Resources */,
+				79FAF65F220B45DD00A52D93 /* ScriptCalculator.storyboard in Resources */,
 				79FAF5E2220B2C3A00A52D93 /* Main.storyboard in Resources */,
+				79FAF622220B345000A52D93 /* eScript.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,8 +432,39 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79FAF5DD220B2C3800A52D93 /* ViewController.swift in Sources */,
+				79FAF659220B42F000A52D93 /* ScriptCalculatorWindow.swift in Sources */,
+				79FAF60B220B2DB700A52D93 /* GeneralExtensions.swift in Sources */,
+				79FAF642220B3F8300A52D93 /* URLExtensions.swift in Sources */,
+				79FAF61D220B33FB00A52D93 /* eSConstants.swift in Sources */,
+				79FAF63A220B3B3500A52D93 /* VisitData.swift in Sources */,
+				79FAF624220B354500A52D93 /* CommonFunctions.swift in Sources */,
+				79FAF62B220B36A900A52D93 /* LabsViewController.swift in Sources */,
+				79FAF615220B2DCF00A52D93 /* PhoneMessageVC.swift in Sources */,
+				79FAF64E220B3FAB00A52D93 /* AssessmentModel.swift in Sources */,
+				79FAF609220B2DB700A52D93 /* StringExtensions.swift in Sources */,
+				79FAF614220B2DCF00A52D93 /* PMSymptomsController.swift in Sources */,
+				79FAF65A220B42F000A52D93 /* ScriptCalculatorVC.swift in Sources */,
+				79FAF611220B2DCF00A52D93 /* PMCurrentMedsController.swift in Sources */,
+				79FAF613220B2DCF00A52D93 /* Phone Message Model.swift in Sources */,
+				79FAF637220B3B3500A52D93 /* TaskPickerViewController.swift in Sources */,
+				79FAF62A220B36A900A52D93 /* LabSetUpPrintViewController.swift in Sources */,
+				79FAF65B220B42F000A52D93 /* ScriptDataModel.swift in Sources */,
+				79FAF635220B3B3500A52D93 /* TaskPickerModel.swift in Sources */,
+				79FAF636220B3B3500A52D93 /* criteriaViewController.swift in Sources */,
+				79FAF651220B3FAB00A52D93 /* ChartData.swift in Sources */,
+				79FAF629220B36A900A52D93 /* LabsModel.swift in Sources */,
+				79FAF5DD220B2C3800A52D93 /* HydraVC.swift in Sources */,
+				79FAF64C220B3FAB00A52D93 /* NoteMedsVC.swift in Sources */,
+				79FAF61F220B33FB00A52D93 /* eScriptVC.swift in Sources */,
+				79FAF644220B3F8A00A52D93 /* ViewExtensions.swift in Sources */,
+				79FAF639220B3B3500A52D93 /* DataProcessingModel.swift in Sources */,
+				79FAF612220B2DCF00A52D93 /* PM Constants.swift in Sources */,
+				79FAF638220B3B3500A52D93 /* resultsViewController.swift in Sources */,
+				79FAF650220B3FAB00A52D93 /* BuilderInterfaceVC.swift in Sources */,
 				79FAF5DB220B2C3800A52D93 /* AppDelegate.swift in Sources */,
+				79FAF60A220B2DB700A52D93 /* Buttons.swift in Sources */,
+				79FAF61E220B33FB00A52D93 /* eSFunctions.swift in Sources */,
+				79FAF64D220B3FAB00A52D93 /* BuilderConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +506,38 @@
 				79FAF5E1220B2C3A00A52D93 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		79FAF617220B2EC800A52D93 /* PhoneMessage.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79FAF618220B2EC800A52D93 /* Base */,
+			);
+			name = PhoneMessage.storyboard;
+			sourceTree = "<group>";
+		};
+		79FAF62C220B377900A52D93 /* Labs.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79FAF62D220B377900A52D93 /* Base */,
+			);
+			name = Labs.storyboard;
+			sourceTree = "<group>";
+		};
+		79FAF63E220B3EC800A52D93 /* PTVNScraper.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79FAF63F220B3EC800A52D93 /* Base */,
+			);
+			name = PTVNScraper.storyboard;
+			sourceTree = "<group>";
+		};
+		79FAF65D220B45DD00A52D93 /* ScriptCalculator.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79FAF65E220B45DD00A52D93 /* Base */,
+			);
+			name = ScriptCalculator.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -353,7 +594,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -408,7 +649,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -421,7 +662,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Hydra/Hydra.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VY6BVT84SC;
@@ -430,6 +670,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fulgentwake.Hydra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -440,7 +681,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Hydra/Hydra.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = VY6BVT84SC;
@@ -449,6 +689,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fulgentwake.Hydra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

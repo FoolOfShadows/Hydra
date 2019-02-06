@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class ViewController: NSViewController {
+class HydraVC: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
