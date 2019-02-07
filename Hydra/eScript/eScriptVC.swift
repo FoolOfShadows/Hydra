@@ -23,6 +23,11 @@ class eScriptVC: NSViewController {
         super.viewDidLoad()
         //scriptUndoManager = scriptText.undoManager
     }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        self.view.window?.title = "eScript"
+    }
 
 	@IBAction func processPFData(_ sender: Any) {
 		

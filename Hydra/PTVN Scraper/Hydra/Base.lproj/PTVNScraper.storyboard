@@ -235,10 +235,10 @@
             </objects>
             <point key="canvasLocation" x="-345" y="577"/>
         </scene>
-        <!--Results View Controller-->
+        <!--PTVN Scraper-->
         <scene sceneID="tcZ-el-Bt4">
             <objects>
-                <viewController id="V5T-PO-UBE" customClass="resultsViewController" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="PTVN Scraper" id="V5T-PO-UBE" customClass="resultsViewController" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="8K8-6T-xjW">
                         <rect key="frame" x="0.0" y="0.0" width="512" height="681"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -708,11 +708,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="HydraVC" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="176"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="309"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYc-jp-T4l">
-                                <rect key="frame" x="14" y="128" width="143" height="32"/>
+                                <rect key="frame" x="14" y="68" width="143" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Phone Messages" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CX1-c0-F7K">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -723,9 +723,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXz-D9-r9b">
-                                <rect key="frame" x="376" y="95" width="90" height="32"/>
+                                <rect key="frame" x="195" y="203" width="90" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="eScripts" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="VxZ-lp-dPi">
+                                <buttonCell key="cell" type="square" alternateTitle="eScripts" bezelStyle="shadowlessSquare" image="eRXicon1024" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="VxZ-lp-dPi">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -734,9 +734,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BtE-B5-XWj">
-                                <rect key="frame" x="14" y="95" width="70" height="32"/>
+                                <rect key="frame" x="195" y="44" width="90" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Labs" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="OPU-pb-a9d">
+                                <buttonCell key="cell" type="square" alternateTitle="Labs" bezelStyle="shadowlessSquare" image="TestTubeIcon512" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="OPU-pb-a9d">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -745,18 +745,29 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tXG-EI-cGF">
-                                <rect key="frame" x="378" y="128" width="88" height="32"/>
+                                <rect key="frame" x="372" y="203" width="88" height="86"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Scraper" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="R45-9G-8dc">
+                                <buttonCell key="cell" type="square" alternateTitle="Scraper" bezelStyle="shadowlessSquare" image="ScraperIcon1024" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="R45-9G-8dc">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="DPq-bX-jtR" kind="sheet" id="dZL-ph-IyA"/>
+                                    <segue destination="DPq-bX-jtR" kind="show" id="dZL-ph-IyA"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGx-pt-mR8">
+                                <rect key="frame" x="20" y="203" width="90" height="86"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="square" alternateTitle="Builder" bezelStyle="shadowlessSquare" image="BuilderIcon1024" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="7sJ-mL-AgG">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <segue destination="CDZ-Bi-73i" kind="sheet" id="hnq-St-Qm0"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qt-2b-TFT">
-                                <rect key="frame" x="324" y="62" width="142" height="32"/>
+                                <rect key="frame" x="324" y="68" width="142" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Script Calculator" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hHk-xc-jc3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -766,23 +777,48 @@
                                     <segue destination="fKM-s8-Iod" kind="sheet" id="7eX-M9-S3c"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGx-pt-mR8">
-                                <rect key="frame" x="14" y="62" width="83" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Builder" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="7sJ-mL-AgG">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oob-fc-ydS">
+                                <rect key="frame" x="23" y="178" width="85" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="PTVN Builder" id="PhN-GR-Com">
                                     <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <segue destination="CDZ-Bi-73i" kind="sheet" id="hnq-St-Qm0"/>
-                                </connections>
-                            </button>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-ne-Fya">
+                                <rect key="frame" x="213" y="178" width="54" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="eScripts" id="Tzo-hG-dcg">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="isP-xm-6pG">
+                                <rect key="frame" x="371" y="178" width="90" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="PTVN Scraper" id="oC1-EO-cK4">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4t-s8-doq">
+                                <rect key="frame" x="223" y="19" width="34" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Labs" id="C73-Sc-SPE">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="608"/>
+            <point key="canvasLocation" x="75" y="674.5"/>
         </scene>
         <!--PhoneMessage-->
         <scene sceneID="MNT-rM-VFa">
@@ -833,4 +869,10 @@
             <point key="canvasLocation" x="61" y="1111"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="BuilderIcon1024" width="1024" height="1024"/>
+        <image name="ScraperIcon1024" width="1024" height="1024"/>
+        <image name="TestTubeIcon512" width="512" height="512"/>
+        <image name="eRXicon1024" width="1024" height="1024"/>
+    </resources>
 </document>

@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Phone MessageVC-->
+        <!--Phone Messages-->
         <scene sceneID="fvL-ur-faK">
             <objects>
-                <viewController id="eqh-Ls-QA5" customClass="PhoneMessageVC" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Phone Messages" id="eqh-Ls-QA5" customClass="PhoneMessageVC" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="X3S-L9-mrS">
                         <rect key="frame" x="0.0" y="0.0" width="1002" height="737"/>
                         <autoresizingMask key="autoresizingMask"/>

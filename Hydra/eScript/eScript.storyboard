@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--ScriptVC-->
+        <!--eScripts-->
         <scene sceneID="dmE-L0-RiK">
             <objects>
-                <viewController id="Pbr-Lx-Ylb" customClass="eScriptVC" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="eScripts" id="Pbr-Lx-Ylb" customClass="eScriptVC" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="WPy-Ak-ihW">
                         <rect key="frame" x="0.0" y="0.0" width="442" height="524"/>
                         <autoresizingMask key="autoresizingMask"/>

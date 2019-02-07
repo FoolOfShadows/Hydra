@@ -40,6 +40,13 @@ class criteriaViewController: NSViewController {
 		betweenStartDate.dateValue = Date()
 		betweenEndDate.dateValue = Date()
     }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        //This is where and how to give the window of a view
+        //opened by a segue a title
+        self.view.window?.title = "PTVN Scraper"
+    }
 	
 	func processTheDirectory() -> [URL] {
         if let theSelectorTag = timeSelectorMatrix.selectedCell()?.tag {
