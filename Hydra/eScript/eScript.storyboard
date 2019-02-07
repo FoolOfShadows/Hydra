@@ -10,13 +10,13 @@
         <scene sceneID="dmE-L0-RiK">
             <objects>
                 <viewController title="eScripts" id="Pbr-Lx-Ylb" customClass="eScriptVC" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" wantsLayer="YES" id="WPy-Ak-ihW">
-                        <rect key="frame" x="0.0" y="0.0" width="442" height="524"/>
+                    <view key="view" wantsLayer="YES" misplaced="YES" id="WPy-Ak-ihW">
+                        <rect key="frame" x="0.0" y="0.0" width="453" height="524"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="ZDc-Pk-3td">
-                                <rect key="frame" x="332" y="13" width="96" height="32"/>
-                                <buttonCell key="cell" type="push" title="Proccess" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pRD-uz-rHs">
+                                <rect key="frame" x="332" y="13" width="107" height="32"/>
+                                <buttonCell key="cell" type="push" title="New Script" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pRD-uz-rHs">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -25,17 +25,17 @@
                                 </connections>
                             </button>
                             <scrollView horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgb-Ay-QSk">
-                                <rect key="frame" x="20" y="94" width="402" height="410"/>
+                                <rect key="frame" x="20" y="94" width="413" height="410"/>
                                 <clipView key="contentView" drawsBackground="NO" id="htv-4i-2qF">
-                                    <rect key="frame" x="1" y="1" width="385" height="408"/>
+                                    <rect key="frame" x="1" y="1" width="396" height="408"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" verticallyResizable="YES" usesFontPanel="YES" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="bOC-pN-Fof">
-                                            <rect key="frame" x="0.0" y="0.0" width="385" height="408"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="396" height="408"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="385" height="408"/>
+                                            <size key="minSize" width="396" height="408"/>
                                             <size key="maxSize" width="463" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                         </textView>
@@ -46,7 +46,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="c71-jm-Bf7">
-                                    <rect key="frame" x="386" y="1" width="15" height="408"/>
+                                    <rect key="frame" x="397" y="1" width="15" height="408"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
@@ -61,7 +61,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aHA-cg-aZb">
-                                <rect key="frame" x="272" y="46" width="156" height="32"/>
+                                <rect key="frame" x="283" y="46" width="156" height="32"/>
                                 <buttonCell key="cell" type="push" title="Add Another Script" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ViQ-dv-PsI">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -81,7 +81,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JVW-ns-Ndj">
-                                <rect key="frame" x="17" y="46" width="75" height="32"/>
+                                <rect key="frame" x="14" y="13" width="75" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2xh-eI-f9Q">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>

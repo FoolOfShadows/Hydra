@@ -11,11 +11,11 @@
             <objects>
                 <viewController id="vsa-qr-BgG" customClass="criteriaViewController" customModule="Hydra" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="RQr-8d-wpn">
-                        <rect key="frame" x="0.0" y="0.0" width="304" height="371"/>
+                        <rect key="frame" x="0.0" y="0.0" width="363" height="334"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <matrix verticalHuggingPriority="750" fixedFrame="YES" allowsEmptySelection="NO" autosizesCells="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HV3-vS-2TP">
-                                <rect key="frame" x="20" y="131" width="90" height="220"/>
+                                <rect key="frame" x="20" y="94" width="90" height="220"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 <size key="cellSize" width="90" height="55"/>
@@ -57,7 +57,7 @@
                                 </cells>
                             </matrix>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ykX-Td-Pvd">
-                                <rect key="frame" x="94" y="316" width="114" height="17"/>
+                                <rect key="frame" x="94" y="279" width="114" height="17"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Date" id="6br-Qo-q6d">
                                     <font key="font" metaFont="system" size="15"/>
@@ -66,7 +66,7 @@
                                 </textFieldCell>
                             </textField>
                             <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PGc-Ik-otg">
-                                <rect key="frame" x="75" y="258" width="96" height="27"/>
+                                <rect key="frame" x="75" y="221" width="96" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="Zt6-Ib-uCS">
                                     <font key="font" metaFont="system"/>
@@ -81,7 +81,7 @@
                                 </connections>
                             </datePicker>
                             <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5QH-q0-fl2">
-                                <rect key="frame" x="86" y="204" width="96" height="27"/>
+                                <rect key="frame" x="86" y="167" width="96" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="8Bk-E0-5eV">
                                     <font key="font" metaFont="system"/>
@@ -96,7 +96,7 @@
                                 </connections>
                             </datePicker>
                             <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dfm-aW-ODN">
-                                <rect key="frame" x="113" y="149" width="96" height="27"/>
+                                <rect key="frame" x="113" y="112" width="96" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="p7c-BA-rVt">
                                     <font key="font" metaFont="system"/>
@@ -111,7 +111,7 @@
                                 </connections>
                             </datePicker>
                             <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cem-Tg-kdP">
-                                <rect key="frame" x="113" y="118" width="96" height="27"/>
+                                <rect key="frame" x="250" y="112" width="96" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="D4O-H9-tta">
                                     <font key="font" metaFont="system"/>
@@ -126,28 +126,16 @@
                                 </connections>
                             </datePicker>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SSm-Hm-DEC">
-                                <rect key="frame" x="77" y="118" width="30" height="19"/>
+                                <rect key="frame" x="212" y="114" width="32" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="and" id="tjd-mz-p9g">
-                                    <font key="font" metaFont="system" size="15"/>
+                                    <font key="font" metaFont="system" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yde-GY-a0Y">
-                                <rect key="frame" x="14" y="55" width="66" height="32"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Pick" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ySp-r5-N1i">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="takeFind:" target="vsa-qr-BgG" id="RSQ-mg-OpB"/>
-                                    <segue destination="B5Z-04-3G3" kind="sheet" identifier="pick" id="CiM-Jd-5uQ"/>
-                                </connections>
-                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ai6-cS-hVb">
-                                <rect key="frame" x="14" y="22" width="56" height="32"/>
+                                <rect key="frame" x="102" y="13" width="56" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Rx" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kk6-1D-6Z4">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -159,7 +147,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LJY-rv-yT6">
-                                <rect key="frame" x="70" y="22" width="61" height="32"/>
+                                <rect key="frame" x="158" y="13" width="61" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Ref" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gqd-OV-XHK">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -171,7 +159,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jst-1f-iy6">
-                                <rect key="frame" x="102" y="55" width="70" height="32"/>
+                                <rect key="frame" x="102" y="46" width="70" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="PMH" bezelStyle="rounded" alignment="center" enabled="NO" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GSd-Xu-gfa">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -182,13 +170,13 @@
                                 </connections>
                             </button>
                             <progressIndicator hidden="YES" wantsLayer="YES" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" maxValue="100" bezeled="NO" indeterminate="YES" controlSize="small" style="spinning" translatesAutoresizingMaskIntoConstraints="NO" id="tEl-eE-hFm">
-                                <rect key="frame" x="237" y="65" width="16" height="16"/>
+                                <rect key="frame" x="325" y="289" width="16" height="16"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </progressIndicator>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qKn-ZB-PXc">
-                                <rect key="frame" x="201" y="22" width="89" height="32"/>
+                                <rect key="frame" x="291" y="13" width="56" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Process" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ys0-sN-WUl">
+                                <buttonCell key="cell" type="push" title="All" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Ys0-sN-WUl">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -197,7 +185,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BPy-xJ-y0z">
-                                <rect key="frame" x="131" y="22" width="72" height="32"/>
+                                <rect key="frame" x="219" y="13" width="72" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Front" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="net-i0-rXP">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -209,7 +197,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lWO-d3-ZSR">
-                                <rect key="frame" x="212" y="55" width="75" height="32"/>
+                                <rect key="frame" x="14" y="13" width="75" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="push" title="Close" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="o9Z-bB-1Ha">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -217,6 +205,18 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="dismissController:" target="vsa-qr-BgG" id="yUP-aQ-5KA"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yde-GY-a0Y">
+                                <rect key="frame" x="14" y="46" width="66" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="Pick" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ySp-r5-N1i">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="takeFind:" target="vsa-qr-BgG" id="RSQ-mg-OpB"/>
+                                    <segue destination="B5Z-04-3G3" kind="sheet" identifier="pick" id="CiM-Jd-5uQ"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -233,7 +233,7 @@
                 </viewController>
                 <customObject id="BQ8-jx-8Bb" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-345" y="577"/>
+            <point key="canvasLocation" x="-315.5" y="558"/>
         </scene>
         <!--PTVN Scraper-->
         <scene sceneID="tcZ-el-Bt4">
@@ -378,7 +378,7 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="JSO-uH-6Rw">
-                                                            <rect key="frame" x="48.5" y="1" width="521" height="43"/>
+                                                            <rect key="frame" x="49" y="1" width="521" height="43"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Z6t-ao-RSR">

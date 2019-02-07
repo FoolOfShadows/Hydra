@@ -221,9 +221,9 @@
 			isa = PBXGroup;
 			children = (
 				79FAF617220B2EC800A52D93 /* PhoneMessage.storyboard */,
+				79FAF610220B2DCF00A52D93 /* PhoneMessageVC.swift */,
 				79FAF60D220B2DCF00A52D93 /* PM Constants.swift */,
 				79FAF60C220B2DCF00A52D93 /* PMCurrentMedsController.swift */,
-				79FAF610220B2DCF00A52D93 /* PhoneMessageVC.swift */,
 				79FAF60E220B2DCF00A52D93 /* Phone Message Model.swift */,
 				79FAF60F220B2DCF00A52D93 /* PMSymptomsController.swift */,
 			);

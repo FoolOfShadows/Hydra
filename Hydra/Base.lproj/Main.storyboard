@@ -712,9 +712,9 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VYc-jp-T4l">
-                                <rect key="frame" x="14" y="68" width="143" height="32"/>
+                                <rect key="frame" x="20" y="44" width="102" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Phone Messages" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="CX1-c0-F7K">
+                                <buttonCell key="cell" type="square" alternateTitle="Phone Messages" bezelStyle="shadowlessSquare" image="PhoneIcon512" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="CX1-c0-F7K">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -752,7 +752,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="DPq-bX-jtR" kind="show" id="dZL-ph-IyA"/>
+                                    <segue destination="DPq-bX-jtR" kind="sheet" id="dZL-ph-IyA"/>
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BGx-pt-mR8">
@@ -767,9 +767,9 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2qt-2b-TFT">
-                                <rect key="frame" x="324" y="68" width="142" height="32"/>
+                                <rect key="frame" x="364" y="44" width="88" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="push" title="Script Calculator" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hHk-xc-jc3">
+                                <buttonCell key="cell" type="square" alternateTitle="Script Calculator" bezelStyle="shadowlessSquare" image="CalculatorIcon512" imagePosition="only" alignment="center" imageScaling="proportionallyDown" inset="2" id="hHk-xc-jc3">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
@@ -808,6 +808,24 @@
                                 <rect key="frame" x="223" y="19" width="34" height="17"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Labs" id="C73-Sc-SPE">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gvt-yE-FNY">
+                                <rect key="frame" x="18" y="19" width="107" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Phone Messages" id="ZuL-84-6Q5">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MdC-Ap-ue7">
+                                <rect key="frame" x="355" y="19" width="106" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Script Calculator" id="qXC-Pl-iKC">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -871,6 +889,8 @@
     </scenes>
     <resources>
         <image name="BuilderIcon1024" width="1024" height="1024"/>
+        <image name="CalculatorIcon512" width="512" height="512"/>
+        <image name="PhoneIcon512" width="512" height="499"/>
         <image name="ScraperIcon1024" width="1024" height="1024"/>
         <image name="TestTubeIcon512" width="512" height="512"/>
         <image name="eRXicon1024" width="1024" height="1024"/>
