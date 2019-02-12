@@ -32,6 +32,8 @@ let lastChargeBadBits = ["A\\(Charge\\):", "Problems\\*\\*", "\\*problems\\*", "
 
 let newMedsBadBits = ["Medications attached to this encounter:", "Orders Print", "    •    ", "(?m)by .*\\d\\d/\\d\\d/\\d\\d"]
 
+let noteAssessmentBadBits = ["Assessment Edit", "Diagnoses attached to this encounter:"]
+
 //let visitBoilerplateText = "CC:  \nProblems:  \n\n\nS:  \n\nLocation:  \nSeverity:  \nQuality:  \nDuration:  \nTiming:  \nContext:  \nModifying factors:  \nAssociated symptoms:  \n\n\nNEW PMH:  \n\n\nA(Charge):  \n\n\nP(lan):  \n\n**Rx**  \n\n\nO(PE):  \n\n\n"
 //
 //let medKey = "(- = currently taking; x = not currently taking; ? = unsure)\n"

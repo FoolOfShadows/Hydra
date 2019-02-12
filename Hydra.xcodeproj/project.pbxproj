@@ -270,12 +270,12 @@
 			isa = PBXGroup;
 			children = (
 				79FAF654220B420300A52D93 /* Builder.storyboard */,
-				79FAF647220B3FAA00A52D93 /* AssessmentModel.swift */,
 				79FAF649220B3FAB00A52D93 /* BuilderInterfaceVC.swift */,
+				79FAF645220B3FAA00A52D93 /* NoteMedsVC.swift */,
 				79FAF64A220B3FAB00A52D93 /* ChartData.swift */,
+				79FAF647220B3FAA00A52D93 /* AssessmentModel.swift */,
 				79FAF646220B3FAA00A52D93 /* BuilderConstants.swift */,
 				79FAF64B220B3FAB00A52D93 /* Ellipsis.jpg */,
-				79FAF645220B3FAA00A52D93 /* NoteMedsVC.swift */,
 				79FAF648220B3FAA00A52D93 /* PF Summary.png */,
 			);
 			path = "PTVN Builder";

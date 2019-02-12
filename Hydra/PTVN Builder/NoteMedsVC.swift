@@ -11,6 +11,7 @@ import Cocoa
 class NoteMedsVC: NSViewController {
 
     weak var currentPTVNDelegate: ptvnDelegate?
+    //currentData gets passed the ChartData from the initial VC upon seque
     var currentData = ChartData(chartData: "")
     var saveLocation = "Desktop"
     var ptVisitDate = 0
@@ -19,23 +20,33 @@ class NoteMedsVC: NSViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
     }
     
     @IBAction func finishCreatingPTVN(_ sender: AnyObject) {
-        //Get note med data
-        //Get the clipboard to process
+        //Get note med data from the clipboard to process
         let pasteBoard = NSPasteboard.general
         guard let theText = pasteBoard.string(forType: NSPasteboard.PasteboardType(rawValue: "public.utf8-plain-text")) else { return }
         var newMeds = theText.simpleRegExMatch(ChartData.Regexes.newMeds.rawValue).cleanTheTextOf(newMedsBadBits)
         newMeds = newMeds.replaceRegexPattern("(?m)\nEncounter Comments:\n", with: "Sig: ")
+        print(newMeds)
+        //Get note assessment from the clipboard
+        let noteAssessment = theText.simpleRegExMatch(ChartData.Regexes.pfNoteAssessment.rawValue).cleanTheTextOf(noteAssessmentBadBits)
+    
         //Process note med data and replace existing med data
+        //Convert med list from PF Note into an array
         let noteArray = newMeds.convertListToArray()
-        var results = [String]()
+        
+        //Convert med list from Summary tab into an array
         var summary = currentData.currentMeds
         summary = summary.replaceRegexPattern("Start: \\d\\d/\\d\\d/\\d\\d", with: "")
-        //summary = summary.replaceRegexPattern("Show historical \\(\\d.\\)", with: "")
         let summaryArray = summary.cleanTheTextOf(["- "]).convertListToArray()
+        
+        //Instantiate a new array to hold the results of comparing the two med arrays
+        var results = [String]()
+        
+        //Compair the two arrays to see if a given item with less data from the Summary array
+        //can be replaced with a more complete version (contains med sig) of the data from
+        //the Note array
         for summaryItem in summaryArray {
             var matched = false
             innerLoop: for noteItem in noteArray {
@@ -45,12 +56,17 @@ class NoteMedsVC: NSViewController {
                     break innerLoop
                 }
             }
+            //If there is no better version in the Note array, keep the Summary version
             if matched == false {
                 results.append(summaryItem)
             }
         }
-        let filteredArray = noteArray.filter{ !results.contains($0) }
-        results += filteredArray
+        
+        //I think this bit ended up being redundant
+//        print("Original Results array: \(results)")
+//        let filteredArray = noteArray.filter{ !results.contains($0) }
+//        results += filteredArray
+//        print("Adjusted Results array: \(results)")
         var finalMedList = currentData.currentMeds
         if !results.isEmpty {
             finalMedList = results.joined(separator: "\n").addCharacterToBeginningOfEachLine("-")
@@ -91,7 +107,14 @@ class NoteMedsVC: NSViewController {
             lastCharge = OldNoteData(fileURL: shortList[0]).oldAssessment
             pharmacy = OldNoteData(fileURL: shortList[0]).pharmacy
         }
+//        print("PTVN Assement is: \(lastCharge)")
+//        print("PF Note Assessment is: \(noteAssessment)")
         
+        //If an assessment can be pulled from the last note in PF
+        //and there wasn't one in the PTVN, use the note
+        if !noteAssessment.isEmpty && lastCharge != "Last PTVN not found." {
+            lastCharge = noteAssessment
+        }
         
         let finalResults = """
         #PTVNFILE#
