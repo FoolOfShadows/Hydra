@@ -37,7 +37,7 @@ struct ChartData {
     
     //The regular expressions used to define the desired sections of the text
     enum Regexes:String {
-        case social = "(?s)(Social history).*((?<=)Nutrition history)"/*"(?s)(Social history).*((?<=)Past medical history)"*/
+        case social = "(?s)(Social history).*((?<=)Gender identity)"/*"(?s)(Social history).*((?<=)Past medical history)"*/
         case family1 = "(?s)(Family health history).*(Past medical history)"/*"(?s)(Family health history).*(Preventive care)"*/
         case family2 = "(?s)(Family health history).*(Social history)"
         case nutrition1 = "(?s)(Nutrition history).*((?<=)Family health history)"/*"(?s)(Nutrition history).*((?<=)Developmental history)"*/
@@ -47,7 +47,7 @@ struct ChartData {
         case allergies = "(?s)(Developmental\\shistory|Developmental\\shistory\\s)\\n.*(\\nMedications)" /*"(?s)(\\nAllergies\\n).*(\\nMedications)"*/
         case pmh = "(?s)(Ongoing medical problems).*(Preventive care)" /*"(?s)(Ongoing medical problems).*(Family health history)"*/
         case psh = "(?s)(Major events).*(Ongoing medical problems)"
-        case preventive = "(?s)(Preventive care).*Developmental history" /*"(?s)(Preventive care).*((?<=)Social history)"*/
+        case preventive = "(?s)(Preventive care).*Social history" /*"(?s)(Preventive care).*((?<=)Social history)"*/
         case lastCharge = "(?s)(A\\(Charge\\):).*(Lvl.*\\(done dmw\\))"
         case pharmacy = "(?s)#PHARMACY.*PHARMACY#"
         case newMeds = "(?s)Medications attached to this encounter:.*Orders Print"

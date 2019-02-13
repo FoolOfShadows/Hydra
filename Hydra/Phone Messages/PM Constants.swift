@@ -14,7 +14,7 @@ let medBadBits = ["Medications", "Encounters", "Show historical \\(\\d.*\\)", "S
 
 let nutritionBadBits = ["Nutrition history\n", "Advanced directives", "Developmental history/n"]
 
-let socialBadBits = ["Past medical history", "Social history (free text) \n", "Social history \n", "Smoking status \n", "Gender identity \n", "No gender identity recorded\n", "Sexual orientation \n", "No sexual orientation recorded\n"]
+let socialBadBits = ["Past medical history", "Social history (free text) \n", "Social history \n", "Smoking status \n", "Gender identity \n", "Gender identity", "No gender identity recorded\n", "Sexual orientation \n", "No sexual orientation recorded\n"]
 
 let fmhBadBits = ["Family health history\n", "Preventive care", "Social history"]
 
