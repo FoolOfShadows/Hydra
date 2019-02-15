@@ -99,7 +99,7 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <action selector="dismissController:" target="mx2-tk-qlM" id="51s-x6-eAv"/>
+                                    <action selector="closeWindow:" target="mx2-tk-qlM" id="GfL-gs-jiN"/>
                                 </connections>
                             </button>
                         </subviews>

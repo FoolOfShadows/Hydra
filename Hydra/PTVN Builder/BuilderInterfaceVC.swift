@@ -26,8 +26,11 @@ class BuilderInterfaceVC: NSViewController, ptvnDelegate {
     var currentData = ChartData(chartData: "")
     var visitTime = "00"
     
+    weak var showWindowDelegate: ShowMainWindowDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        let nc = NotificationCenter.default
     }
     
     override func viewDidAppear() {
@@ -123,6 +126,16 @@ class BuilderInterfaceVC: NSViewController, ptvnDelegate {
             }
         }
     }
+    
+    @IBAction func showMainWindow(_ sender: NSMenuItem) {
+        print("Calling showWindow from the delegate")
+        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShowMainWindow")))
+        //showWindowDelegate?.seriouslyShowTheWindow()
+    }
 
+    @IBAction func closeWindow(_ sender: Any) {
+        /*Because this view is presented using a Show segue it can't be dismissed with view.dismiss(self) I have to call back up to the window created to present it and tell that window to close*/
+        self.view.window?.close()
+    }
 }
 

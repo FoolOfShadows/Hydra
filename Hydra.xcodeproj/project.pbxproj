@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7934197F2215F8AD00194019 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7934197E2215F8AD00194019 /* MainWindowController.swift */; };
 		79B0AC51220C86D20082FA0C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 79B0AC50220C86D20082FA0C /* Credits.rtf */; };
 		79FAF5DB220B2C3800A52D93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF5DA220B2C3800A52D93 /* AppDelegate.swift */; };
 		79FAF5DD220B2C3800A52D93 /* HydraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF5DC220B2C3800A52D93 /* HydraVC.swift */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7934197E2215F8AD00194019 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		79B0AC50220C86D20082FA0C /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		79FAF5D7220B2C3800A52D93 /* Hydra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hydra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FAF5DA220B2C3800A52D93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -176,8 +178,9 @@
 		79FAF5D9220B2C3800A52D93 /* Hydra */ = {
 			isa = PBXGroup;
 			children = (
-				79FAF5E0220B2C3A00A52D93 /* Main.storyboard */,
 				79FAF5DA220B2C3800A52D93 /* AppDelegate.swift */,
+				79FAF5E0220B2C3A00A52D93 /* Main.storyboard */,
+				7934197E2215F8AD00194019 /* MainWindowController.swift */,
 				79FAF5DC220B2C3800A52D93 /* HydraVC.swift */,
 				79FAF616220B2DDE00A52D93 /* Phone Messages */,
 				79FAF620220B340300A52D93 /* eScript */,
@@ -462,6 +465,7 @@
 				79FAF61F220B33FB00A52D93 /* eScriptVC.swift in Sources */,
 				79FAF644220B3F8A00A52D93 /* ViewExtensions.swift in Sources */,
 				79FAF639220B3B3500A52D93 /* DataProcessingModel.swift in Sources */,
+				7934197F2215F8AD00194019 /* MainWindowController.swift in Sources */,
 				79FAF612220B2DCF00A52D93 /* PM Constants.swift in Sources */,
 				79FAF638220B3B3500A52D93 /* resultsViewController.swift in Sources */,
 				79FAF650220B3FAB00A52D93 /* BuilderInterfaceVC.swift in Sources */,

@@ -15,7 +15,8 @@ struct Message {
     private let currentDate = Date()
     private let formatter = DateFormatter()
     var messageDate:String {
-        formatter.dateStyle = DateFormatter.Style.short
+        formatter.dateFormat = "MM/dd/yyyy, h:mm a"
+        //formatter.dateStyle = DateFormatter.Style.short
         return formatter.string(from: currentDate)
     }
     var labelDate:String {
