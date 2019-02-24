@@ -28,9 +28,10 @@ class BuilderInterfaceVC: NSViewController, ptvnDelegate {
     
     weak var showWindowDelegate: ShowMainWindowDelegate?
     
+    let nc = NotificationCenter.default
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        let nc = NotificationCenter.default
     }
     
     override func viewDidAppear() {
@@ -38,6 +39,9 @@ class BuilderInterfaceVC: NSViewController, ptvnDelegate {
         //This is where and how to give the window of a view
         //opened by a segue a title
         self.view.window?.title = "PTVN Builder"
+        //This removes the ability to resize the window of a view
+        //opened by a segue
+        self.view.window?.styleMask.remove(.resizable)
     }
     
     func processInitialData() {
@@ -129,7 +133,7 @@ class BuilderInterfaceVC: NSViewController, ptvnDelegate {
     
     @IBAction func showMainWindow(_ sender: NSMenuItem) {
         print("Calling showWindow from the delegate")
-        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: "ShowMainWindow")))
+        nc.post(Notification(name: Notification.Name(rawValue: "ShowMainWindow")))
         //showWindowDelegate?.seriouslyShowTheWindow()
     }
 
