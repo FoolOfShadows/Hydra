@@ -52,7 +52,7 @@ struct ChartData {
         case pharmacy = "(?s)#PHARMACY.*PHARMACY#"
         case newMeds = "(?s)Medications attached to this encounter:.*Orders Print"
         case oldWeight = "Wt:.*lb;\\s*Ht:"
-        case pfNoteAssessment = "(?s)Assessment Edit.*Diagnoses attached to this encounter:"
+        case pfNoteAssessment = "(?s)(Assessment\\sEdit|[A]ssessment\n-).*Diagnoses attached to this encounter:"
     }
     
     //Get the name, age, and DOB from the text

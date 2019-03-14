@@ -107,12 +107,13 @@ class NoteMedsVC: NSViewController {
             lastCharge = OldNoteData(fileURL: shortList[0]).oldAssessment
             pharmacy = OldNoteData(fileURL: shortList[0]).pharmacy
         }
-//        print("PTVN Assement is: \(lastCharge)")
-//        print("PF Note Assessment is: \(noteAssessment)")
+        //print("PTVN Assement is: \(lastCharge)")
+        //print("PF Note Assessment is: \(noteAssessment)")
         
         //If an assessment can be pulled from the last note in PF
         //and there wasn't one in the PTVN, use the note
-        if !noteAssessment.isEmpty && lastCharge != "Last PTVN not found." {
+        if !noteAssessment.isEmpty {
+            //print("Using Note Assessment")
             lastCharge = noteAssessment
         }
         

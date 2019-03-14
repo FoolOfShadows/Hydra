@@ -15,7 +15,13 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        // Checks if user system is Dark Mode capable and sets
+        // the app to Light Mode if it is
+        // FIXME: Doing this because I don't have the text fields in the various
+        // modules set up to correctly handle dark mode.
+        if #available(macOS 10.14, *) {
+            NSApp.appearance = NSAppearance(named: .aqua)
+        }
     }
 
     
