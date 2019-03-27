@@ -33,6 +33,8 @@ class PhoneMessageVC: NSViewController, scriptTableDelegate, symptomsDelegate, N
     
     @IBOutlet weak var lastMessageView: NSTextField!
     
+    @IBOutlet weak var startNewMessageButton: NSButton!
+    
     //For some reason the program crashes on B's MacBook if I try to connect
     //these NSTextViews direct to their outlets in IB
     var allergiesView: NSTextView {
@@ -59,11 +61,13 @@ class PhoneMessageVC: NSViewController, scriptTableDelegate, symptomsDelegate, N
         messageView.font = NSFont.systemFont(ofSize: 18)
         self.resultsCombo.delegate = self
         self.schedulingCombo.delegate = self
+        
        
     }
     
     @IBAction func startNewMessage(_ sender: Any) {
         guard let theWindow = self.view.window else { return }
+        clearMessage(self)
         //Get the clipboard to process
         let pasteBoard = NSPasteboard.general
         guard let theText = pasteBoard.string(forType: NSPasteboard.PasteboardType(rawValue: "public.utf8-plain-text")) else { return }
