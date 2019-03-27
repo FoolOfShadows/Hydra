@@ -36,7 +36,7 @@ class PMCurrentMedsController: NSViewController, NSTableViewDelegate, NSTableVie
 	func getArrayFrom(_ medsString:String) -> [String] {
 		let returnArray = medsString.removeWhiteSpace().components(separatedBy: "\n").filter { $0 != "" && $0 != "  " && !$0.lowercased().starts(with: "stop") && !$0.lowercased().starts(with: "start")}
 		//returnArray = returnArray.map { $0.replacingOccurrences(of: "- ", with: "") }
-		print(returnArray)
+		//print(returnArray)
 		return returnArray
 	}
 	

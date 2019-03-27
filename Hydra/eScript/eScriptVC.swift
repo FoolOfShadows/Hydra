@@ -42,7 +42,7 @@ class eScriptVC: NSViewController {
 		let pharmWithLocation = checkPharmacyLocationFrom(ptPharmacy)
 		let ptDOB = ptNameAgeDOB.2
 		fileLabelName = getFileLabellingName(patientName)
-		print(fileLabelName)
+		//print(fileLabelName)
 		
 		//Get script data
 		let finalScriptData = getScriptDataFrom(theText)
@@ -146,7 +146,7 @@ class eScriptVC: NSViewController {
 		
 		//Get script data
 		var finalScriptData = "\n\n\(ptNameAgeDOB.1)\n\(getScriptDataFrom(theText))"
-        print(finalScriptData)
+        //print(finalScriptData)
 		
 		finalScriptData = currentResults.replacingOccurrences(of: "\n\nRESPONSE:", with: finalScriptData)
 		

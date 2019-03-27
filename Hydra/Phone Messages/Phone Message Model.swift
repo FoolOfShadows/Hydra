@@ -81,7 +81,7 @@ struct Message {
         guard let encountersSection = baseSection.findRegexMatchBetween("Encounters", and: "Messages") else {return ""}
         //print(encountersSection)
         let activeEncounters = encountersSection.ranges(of: "(?s)(\\d./\\d./\\d*)(.*?)(\\n)(?=\\d./\\d./\\d*)", options: .regularExpression).map{encountersSection[$0]}.map{String($0)}.filter {!$0.contains("No chief complaint recorded")}
-        print(activeEncounters)
+        //print(activeEncounters)
         if activeEncounters.count > 0 {
             return activeEncounters[0].simpleRegExMatch("\\d./\\d./\\d*")
         } else {
