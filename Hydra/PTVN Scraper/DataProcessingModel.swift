@@ -188,7 +188,14 @@ func getMedLines(_ theText:String) -> [String] {
     let theLines = theText.components(separatedBy: "\n")
     for line in theLines {
         if line.contains("~~") {
-            let cleanLine = line.replacingOccurrences(of: "~~", with: "")
+            let cleanLine = cleanTheSections(line, badBits: ["~~"])
+            //let cleanLine = line.replacingOccurrences(of: "~~", with: "")
+            markedLines.append(cleanLine)
+        } else if line.contains("``") {
+            let cleanLine = "UPDATE ONLY: \(cleanTheSections(line, badBits: ["``"]))"
+            markedLines.append(cleanLine)
+        } else if line.contains("`~") {
+            let cleanLine = "RX and UPDATE: \(cleanTheSections(line, badBits: ["`~"]))"
             markedLines.append(cleanLine)
         }
     }
