@@ -64,7 +64,7 @@ class criteriaViewController: NSViewController {
 			originFolderURL = URL(fileURLWithPath: "\(basePath)/WPCMSharedFiles/zDonna Review/01 PTVN Files")
 		}
 		
-        print("OriginFolder set to: \(originFolderURL)")
+        //print("OriginFolder set to: \(originFolderURL)")
 		return originFolderURL.getFilesInDirectoryWhereNameContains(["PTVN"])
 	}
     
@@ -106,11 +106,13 @@ class criteriaViewController: NSViewController {
                 theSender = .REF
             case "Front":
                 theSender = .FRONT
+            case "FU":
+                theSender = .FU
             default:
                 theSender = .ALL
             }
             if segue.identifier! == "showReport" {
-                print("showReport segue activated")
+                //print("showReport segue activated")
                 if let toViewController = segue.destinationController as? resultsViewController {
                     var results = [String]()
                     if self.chosenItems.isEmpty {
@@ -128,7 +130,26 @@ class criteriaViewController: NSViewController {
                         toViewController.results = self.chosenItems.joined(separator: "\n\n")
                     }
                 }
-            } /*else if segue.identifier!.rawValue == "pick" {
+            } else if segue.identifier! == "showFU" {
+                if let toViewController = segue.destinationController as? resultsViewController {
+                    var results = [String]()
+                    if self.chosenItems.isEmpty {
+                        let processedFiles = processTheFiles(self.getFilesForDateSelection(processTheDirectory()), for: theSender)
+                        for file in processedFiles {
+                            if !file.tasks.isEmpty && file.tasks != [""] {
+                                results.append(file.followupOutput())
+                                
+                            }
+                        }
+                        toViewController.results = results.joined(separator: "\n\n")
+                        toViewController.requester = theSender.rawValue
+                    } else {
+                        toViewController.results = self.chosenItems.joined(separator: "\n\n")
+                    }
+                }
+            }
+            
+            /*else if segue.identifier!.rawValue == "pick" {
                 if let toViewController = segue.destinationController as? TaskPickerViewController {
                     let visitDataArray = processTheFiles(self.getFilesForDateSelection(<#[URL]#>), for: theSender)
                     toViewController.visitDataArray = visitDataArray

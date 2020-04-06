@@ -63,10 +63,11 @@ enum SearchType:String {
     case REF = "REFERRALS"
     case PMH = "PMH CHANGES"
     case FRONT = "XRAY & LAB ORDERS"
+    case FU = "FOLLOW UP"
 }
 
 func processTheFiles(_ theFiles:[URL]?, for type: SearchType) -> [VisitData] {
-    print("The search type is: \(type)")
+    //print("The search type is: \(type)")
     
     var chosenFunction: (String) -> [String]
     
@@ -82,6 +83,8 @@ func processTheFiles(_ theFiles:[URL]?, for type: SearchType) -> [VisitData] {
     //FIXME: replace with a function pulling xrays and lab orders
     case .FRONT:
         chosenFunction = getFrontDeskLines(_:)
+    case .FU:
+        chosenFunction = getFollowupLines(_:)
     }
     
     //print("Processing the files")
@@ -101,7 +104,7 @@ func processTheFiles(_ theFiles:[URL]?, for type: SearchType) -> [VisitData] {
                     let pharmacyName = getPatientDataOfType("PHARMACY", from: ptvnContents)
                     let markedResults = cleanTheSelection(chosenFunction(ptvnContents), badBits: badBits)
                     if !markedResults.isEmpty {
-                        neededRxs.append(VisitData(dob: dobResults, name: nameResults, pharmacy: pharmacyName, tasks: markedResults))
+                        neededRxs.append(VisitData(visitDate: getVisitDate(ptvnContents), dob: dobResults, name: nameResults, pharmacy: pharmacyName, tasks: markedResults))
                         //print(neededRxs)
                     }
                 } else {
@@ -111,9 +114,9 @@ func processTheFiles(_ theFiles:[URL]?, for type: SearchType) -> [VisitData] {
                     let markedResults = cleanTheSelection(chosenFunction(ptvnContents), badBits: badBits)
                     
                     if (!rxResults.isEmpty) && (!markedResults.isEmpty) {
-                        neededRxs.append(VisitData(dob: dobResults, name: nameResults, tasks: rxResults + markedResults))
+                        neededRxs.append(VisitData(visitDate: getVisitDate(ptvnContents), dob: dobResults, name: nameResults, tasks: rxResults + markedResults))
                     } else if (!rxResults.isEmpty) || (!markedResults.isEmpty) {
-                        neededRxs.append(VisitData(dob: dobResults, name: nameResults, tasks: rxResults + markedResults))
+                        neededRxs.append(VisitData(visitDate: getVisitDate(ptvnContents), dob: dobResults, name: nameResults, tasks: rxResults + markedResults))
                     }
                 }
             } catch {
@@ -124,6 +127,18 @@ func processTheFiles(_ theFiles:[URL]?, for type: SearchType) -> [VisitData] {
     }
     //print(neededRxs)
     return neededRxs
+}
+
+func getVisitDate(_ theText:String) -> Date {
+    //print(theText)
+    let stringDate = simpleRegExMatch(theText, theExpression: "(?s)#VISITDATE.*VISITDATE#").cleanTheTextOf(["#VISITDATE","VISITDATE#"])
+    //print(stringDate)
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "MM/dd/yy"
+    //print(dateFormatter.date(from: stringDate))
+    //FIXME - Force unwrapping is the wrong choice for this
+    return dateFormatter.date(from: stringDate)!
+    //return Date()
 }
 
 
@@ -180,6 +195,19 @@ func getMarkedLines(_ theText:String) -> [String] {
 		}
 	}
 	return markedLines
+}
+
+func getFollowupLines(_ theText:String) -> [String] {
+    var markedLines = [String]()
+    let theLines = theText.components(separatedBy: "\n")
+    for line in theLines {
+        if line.contains("`•") {
+            let cleanLine = cleanTheSections(line, badBits: ["`•"])
+            markedLines.append(cleanLine)
+        }
+    }
+    
+    return markedLines
 }
 
 func getMedLines(_ theText:String) -> [String] {
