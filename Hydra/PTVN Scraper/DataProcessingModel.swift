@@ -199,6 +199,9 @@ func getMarkedLines(_ theText:String) -> [String] {
 
 func getFollowupLines(_ theText:String) -> [String] {
     var markedLines = [String]()
+    if !theText.contains("`•") {
+        return ["No followup data for this visit"]
+    }
     let theLines = theText.components(separatedBy: "\n")
     for line in theLines {
         if line.contains("`•") {

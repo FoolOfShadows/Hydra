@@ -98,7 +98,7 @@ class criteriaViewController: NSViewController {
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         var theSender:SearchType
         if let button = sender as? NSButton {
-            print("\n\nThe sending button is \(button.title)")
+            //print("\n\nThe sending button is \(button.title)")
             switch button.title {
             case "Rx":
                 theSender = .MEDS
@@ -117,7 +117,7 @@ class criteriaViewController: NSViewController {
                     var results = [String]()
                     if self.chosenItems.isEmpty {
                         let processedFiles = processTheFiles(self.getFilesForDateSelection(processTheDirectory()), for: theSender)
-                        print(processedFiles)
+                        //print(processedFiles)
                         for file in processedFiles {
                             if !file.tasks.isEmpty && file.tasks != [""] {
                                 print("Tasks for patient \(file.ptName) = \(file.tasks)\n\n\(file.reportOutput())")

@@ -30,12 +30,14 @@ extension VisitData {
         return "\(self.ptName)  (\(self.dateOfBirth))     Visit: \(self.visitDate)\n\(self.pharmacy)\n\(addCharactersToFront(self.tasks.joined(separator: "\n"), theCharacters: "- "))"
 	}
     func followupOutput() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yy"
         if self.tasks.count == 1 {
             var totalDays = Int()
             var approxFUDate = "Unable to calculate correct followup date."
             let theTask = self.tasks[0]
             if !theTask.contains("Schedule follow up appointment in") {
-                return "\(self.ptName)          DOB: \(self.dateOfBirth)\n\(addCharactersToFront(theTask, theCharacters: "- "))"
+                return "\(self.ptName) (\(self.dateOfBirth))     Visit: \(dateFormatter.string(from:self.visitDate))\n\(addCharactersToFront(theTask, theCharacters: "- "))"
             }
             let daysOut = simpleRegExMatch(theTask, theExpression: "\\d+ (months|weeks|days)")
             let length = simpleRegExMatch(theTask, theExpression: "\\d\\d minutes")
@@ -53,16 +55,15 @@ extension VisitData {
                 totalDays = numberDays
             }
             
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "MM/dd/yy"
+            
             if totalDays != 0 {
                 approxFUDate = dateFormatter.string(from: self.visitDate.addingDays(totalDays)!)
             }
             let output = "Schedule next visit for \(daysOut) from this appointment (around \(approxFUDate)), for \(length).\n\(chiefComplaint)"
             
-            return  "\(self.ptName)          DOB: \(self.dateOfBirth)\n\(addCharactersToFront(output, theCharacters: "- "))"
+            return  "\(self.ptName) (\(self.dateOfBirth))     Visit: \(dateFormatter.string(from:self.visitDate))\n\(addCharactersToFront(output, theCharacters: "- "))"
         } else if self.tasks.count == 0 {
-            return "\(self.ptName)     DOB:\(self.dateOfBirth)\n- No follow up data included in PTVN for date \(visitDate)"
+            return "\(self.ptName) (\(self.dateOfBirth))     Visit: \(dateFormatter.string(from:self.visitDate))\n- No follow up data included in PTVN for date \(visitDate)"
         }
         return "Unable to calculate follow up information"
     }
