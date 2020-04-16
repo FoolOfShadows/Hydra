@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.59" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="130-Si-RIL">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="130-Si-RIL">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.59"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="16096"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1072,120 +1072,6 @@
                                     </subviews>
                                 </view>
                             </box>
-                            <box hidden="YES" autoresizesSubviews="NO" fixedFrame="YES" borderType="line" title="Flu" translatesAutoresizingMaskIntoConstraints="NO" id="m0a-Xt-jo2">
-                                <rect key="frame" x="192" y="-120" width="489" height="173"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <view key="contentView" id="Tuq-Px-Qfs">
-                                    <rect key="frame" x="3" y="3" width="483" height="155"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="1" translatesAutoresizingMaskIntoConstraints="NO" id="dUh-Ve-KkH">
-                                            <rect key="frame" x="18" y="119" width="140" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Pt received flu here" bezelStyle="regularSquare" imagePosition="left" inset="2" id="Axw-Uu-jS5">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="onlyOneCheckAtATime:" target="130-Si-RIL" id="HXn-W8-ajl"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="4" translatesAutoresizingMaskIntoConstraints="NO" id="3Zp-SS-Sl4">
-                                            <rect key="frame" x="18" y="37" width="141" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Pt did get flu vac @" bezelStyle="regularSquare" imagePosition="left" inset="2" id="atz-Do-opZ">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="onlyOneCheckAtATime:" target="130-Si-RIL" id="kmY-Pm-B5m"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="2" translatesAutoresizingMaskIntoConstraints="NO" id="N98-hI-z9k">
-                                            <rect key="frame" x="18" y="92" width="109" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Pt declines flu" bezelStyle="regularSquare" imagePosition="left" inset="2" id="gbH-LT-AG7">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="onlyOneCheckAtATime:" target="130-Si-RIL" id="Q7t-mZ-Ft4"/>
-                                            </connections>
-                                        </button>
-                                        <button verticalHuggingPriority="750" fixedFrame="YES" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="HSS-Cq-amf">
-                                            <rect key="frame" x="18" y="66" width="141" height="18"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <buttonCell key="cell" type="check" title="Pt will get flu vac @" bezelStyle="regularSquare" imagePosition="left" inset="2" id="ZYo-4D-wZT">
-                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                <font key="font" metaFont="system"/>
-                                            </buttonCell>
-                                            <connections>
-                                                <action selector="onlyOneCheckAtATime:" target="130-Si-RIL" id="28p-N1-hsL"/>
-                                            </connections>
-                                        </button>
-                                        <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="11" translatesAutoresizingMaskIntoConstraints="NO" id="KVq-4W-8iZ">
-                                            <rect key="frame" x="165" y="61" width="188" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="LoN-F9-sjk">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                <objectValues>
-                                                    <string>Item 1</string>
-                                                    <string>Item 2</string>
-                                                    <string>Item 3</string>
-                                                </objectValues>
-                                            </comboBoxCell>
-                                        </comboBox>
-                                        <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="12" translatesAutoresizingMaskIntoConstraints="NO" id="HSC-8v-u7T">
-                                            <rect key="frame" x="165" y="33" width="188" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="wH6-wA-ZId">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                <objectValues>
-                                                    <string>Item 1</string>
-                                                    <string>Item 2</string>
-                                                    <string>Item 3</string>
-                                                </objectValues>
-                                            </comboBoxCell>
-                                        </comboBox>
-                                        <textField verticalHuggingPriority="750" fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="Z83-rx-ixl">
-                                            <rect key="frame" x="382" y="37" width="80" height="22"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="0Mt-Ed-fAg">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                        <comboBox verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="F5g-KQ-DGp">
-                                            <rect key="frame" x="165" y="89" width="188" height="26"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="hA2-IC-c1H">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                <objectValues>
-                                                    <string>Item 1</string>
-                                                    <string>Item 2</string>
-                                                    <string>Item 3</string>
-                                                </objectValues>
-                                            </comboBoxCell>
-                                        </comboBox>
-                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YcQ-xW-omA">
-                                            <rect key="frame" x="356" y="38" width="20" height="17"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="on" id="JFa-If-jLc">
-                                                <font key="font" metaFont="system"/>
-                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                            </textFieldCell>
-                                        </textField>
-                                    </subviews>
-                                </view>
-                            </box>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3pL-0N-UiU">
                                 <rect key="frame" x="747" y="13" width="73" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1222,7 +1108,7 @@ Gw
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                                 <connections>
-                                    <segue destination="Wqe-bI-QpN" kind="sheet" identifier="setUpPrintLabs" id="gDc-EK-I6b"/>
+                                    <action selector="setUpLabPrinting:" target="130-Si-RIL" id="jEc-bn-Rcl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1230,7 +1116,6 @@ Gw
                     <connections>
                         <outlet property="addOnCheck" destination="MSd-H0-02L" id="o6c-eM-3kO"/>
                         <outlet property="fastingCheck" destination="S3w-BL-024" id="qDm-5h-abA"/>
-                        <outlet property="fluBox" destination="m0a-Xt-jo2" id="E86-qP-cHh"/>
                         <outlet property="labBox" destination="jGc-jC-EHg" id="gzT-1l-jWw"/>
                         <outlet property="labDueMatrix" destination="QGA-yZ-DwS" id="2cM-pq-tF2"/>
                         <outlet property="labView" destination="Z0f-Vy-Ztq" id="6p3-Si-uFu"/>
@@ -1239,6 +1124,7 @@ Gw
                         <outlet property="other2DxCombo" destination="Izg-bB-xPf" id="VgD-PU-OR8"/>
                         <outlet property="other2View" destination="ToO-9U-D2e" id="7mV-UD-DXU"/>
                         <outlet property="reviewedCheck" destination="Nq9-tx-ofa" id="Whf-08-Xkg"/>
+                        <segue destination="Wqe-bI-QpN" kind="sheet" identifier="setUpPrintLabs" id="w0Z-hn-owO"/>
                     </connections>
                 </viewController>
                 <customObject id="xyE-8Y-3MF" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

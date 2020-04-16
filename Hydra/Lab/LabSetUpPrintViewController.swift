@@ -20,6 +20,7 @@ class LabSetUpPrintViewController: NSViewController {
 	var addOnResult = Int()
     var ptName = String()
     var ptDOB = String()
+    var MC = Bool()
 	
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,12 @@ class LabSetUpPrintViewController: NSViewController {
 		currentDateView.stringValue = dateFormatter.string(from: Date())
         patientNameView.stringValue = ptName
         patientDOBView.stringValue = ptDOB
+        print("MC2: \(MC)")
+        if MC == true {
+            mcPrimaryMatrix.selectCell(withTag: 1)
+        } else if MC == false {
+            mcPrimaryMatrix.selectCell(withTag: 0)
+        }
     }
 	
 	
@@ -59,27 +66,28 @@ class LabSetUpPrintViewController: NSViewController {
             + "Dawn Whelchel, MD" + "\n\n\n\n"
             + "\(labNoteVersion)"
         
-        //Create a view to hold the final text so it can be passed to the NSPrintOperation
-        let printView = NSTextView()
-        //Set the size of the view or the text won't appear on the page
-        printView.setFrameSize(NSSize(width: 680, height: 0))
-        //Transfer the final string to the TextView's string property
-        printView.string = labOrderOutputText
-        //printView.sizeToFit()
-        //print(printView.string)
-        let printInfo = NSPrintInfo.shared
-        //printInfo.orientation = .portrait
-        //printInfo.verticalPagination = .autoPagination
-        printInfo.leftMargin = 40
-        //printInfo.rightMargin = 20
-        //printInfo.isHorizontallyCentered = false
-        printInfo.isVerticallyCentered = false
-        //printInfo.topMargin = 0
-        printInfo.bottomMargin = 40
-        let operation: NSPrintOperation = NSPrintOperation(view: printView, printInfo: printInfo)
-        operation.run()
-        
-        self.view.window?.close()
+        printLetterheadWithText(labOrderOutputText, fontSize: 11, window: self.view.window!, andCloseWindow: true)
+//        //Create a view to hold the final text so it can be passed to the NSPrintOperation
+//        let printView = NSTextView()
+//        //Set the size of the view or the text won't appear on the page
+//        printView.setFrameSize(NSSize(width: 680, height: 0))
+//        //Transfer the final string to the TextView's string property
+//        printView.string = labOrderOutputText
+//        //printView.sizeToFit()
+//        //print(printView.string)
+//        let printInfo = NSPrintInfo.shared
+//        //printInfo.orientation = .portrait
+//        //printInfo.verticalPagination = .autoPagination
+//        printInfo.leftMargin = 40
+//        //printInfo.rightMargin = 20
+//        //printInfo.isHorizontallyCentered = false
+//        printInfo.isVerticallyCentered = false
+//        //printInfo.topMargin = 0
+//        printInfo.bottomMargin = 40
+//        let operation: NSPrintOperation = NSPrintOperation(view: printView, printInfo: printInfo)
+//        operation.run()
+//
+//        self.view.window?.close()
     }
 	
 }

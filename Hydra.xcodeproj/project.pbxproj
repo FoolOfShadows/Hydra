@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		7934197F2215F8AD00194019 /* MainWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7934197E2215F8AD00194019 /* MainWindowController.swift */; };
 		79B0AC51220C86D20082FA0C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 79B0AC50220C86D20082FA0C /* Credits.rtf */; };
+		79F75CA42448A8190077551C /* eScriptModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F75CA32448A8190077551C /* eScriptModel.swift */; };
+		79F75CA82448ABA80077551C /* LetterheadPrinting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F75CA62448ABA80077551C /* LetterheadPrinting.swift */; };
+		79F75CA92448ABA80077551C /* WPCM Letterhead Blank Cropped.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 79F75CA72448ABA80077551C /* WPCM Letterhead Blank Cropped.pdf */; };
+		79F75CAB2448AD160077551C /* PatientData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F75CAA2448AD160077551C /* PatientData.swift */; };
 		79FAF5DB220B2C3800A52D93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF5DA220B2C3800A52D93 /* AppDelegate.swift */; };
 		79FAF5DD220B2C3800A52D93 /* HydraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79FAF5DC220B2C3800A52D93 /* HydraVC.swift */; };
 		79FAF5DF220B2C3A00A52D93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FAF5DE220B2C3A00A52D93 /* Assets.xcassets */; };
@@ -76,6 +80,10 @@
 /* Begin PBXFileReference section */
 		7934197E2215F8AD00194019 /* MainWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainWindowController.swift; sourceTree = "<group>"; };
 		79B0AC50220C86D20082FA0C /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		79F75CA32448A8190077551C /* eScriptModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = eScriptModel.swift; sourceTree = "<group>"; };
+		79F75CA62448ABA80077551C /* LetterheadPrinting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LetterheadPrinting.swift; sourceTree = "<group>"; };
+		79F75CA72448ABA80077551C /* WPCM Letterhead Blank Cropped.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "WPCM Letterhead Blank Cropped.pdf"; sourceTree = "<group>"; };
+		79F75CAA2448AD160077551C /* PatientData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientData.swift; sourceTree = "<group>"; };
 		79FAF5D7220B2C3800A52D93 /* Hydra.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Hydra.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79FAF5DA220B2C3800A52D93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79FAF5DC220B2C3800A52D93 /* HydraVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HydraVC.swift; sourceTree = "<group>"; };
@@ -155,10 +163,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79F75CA52448ABA80077551C /* Printing To Letterhead */ = {
+			isa = PBXGroup;
+			children = (
+				79F75CA62448ABA80077551C /* LetterheadPrinting.swift */,
+				79F75CA72448ABA80077551C /* WPCM Letterhead Blank Cropped.pdf */,
+			);
+			path = "Printing To Letterhead";
+			sourceTree = "<group>";
+		};
 		79FAF5CE220B2C3800A52D93 = {
 			isa = PBXGroup;
 			children = (
 				79FAF5D9220B2C3800A52D93 /* Hydra */,
+				79F75CA52448ABA80077551C /* Printing To Letterhead */,
 				79FAF5EC220B2C3A00A52D93 /* HydraTests */,
 				79FAF5F7220B2C3A00A52D93 /* HydraUITests */,
 				79FAF5D8220B2C3800A52D93 /* Products */,
@@ -191,6 +209,7 @@
 				79FAF5DE220B2C3A00A52D93 /* Assets.xcassets */,
 				79FAF5E3220B2C3A00A52D93 /* Info.plist */,
 				79FAF5E4220B2C3A00A52D93 /* Hydra.entitlements */,
+				79F75CAA2448AD160077551C /* PatientData.swift */,
 				79FAF607220B2DB700A52D93 /* Buttons.swift */,
 				79FAF608220B2DB700A52D93 /* GeneralExtensions.swift */,
 				79FAF606220B2DB700A52D93 /* StringExtensions.swift */,
@@ -240,6 +259,7 @@
 				79FAF61C220B33FB00A52D93 /* eScriptVC.swift */,
 				79FAF61A220B33FB00A52D93 /* eSConstants.swift */,
 				79FAF61B220B33FB00A52D93 /* eSFunctions.swift */,
+				79F75CA32448A8190077551C /* eScriptModel.swift */,
 			);
 			path = eScript;
 			sourceTree = "<group>";
@@ -248,9 +268,9 @@
 			isa = PBXGroup;
 			children = (
 				79FAF62C220B377900A52D93 /* Labs.storyboard */,
+				79FAF628220B36A900A52D93 /* LabsViewController.swift */,
 				79FAF626220B36A900A52D93 /* LabsModel.swift */,
 				79FAF627220B36A900A52D93 /* LabSetUpPrintViewController.swift */,
-				79FAF628220B36A900A52D93 /* LabsViewController.swift */,
 			);
 			path = Lab;
 			sourceTree = "<group>";
@@ -413,6 +433,7 @@
 				79FAF655220B420300A52D93 /* Builder.storyboard in Resources */,
 				79FAF65F220B45DD00A52D93 /* ScriptCalculator.storyboard in Resources */,
 				79B0AC51220C86D20082FA0C /* Credits.rtf in Resources */,
+				79F75CA92448ABA80077551C /* WPCM Letterhead Blank Cropped.pdf in Resources */,
 				79FAF5E2220B2C3A00A52D93 /* Main.storyboard in Resources */,
 				79FAF622220B345000A52D93 /* eScript.storyboard in Resources */,
 			);
@@ -457,12 +478,15 @@
 				79FAF62A220B36A900A52D93 /* LabSetUpPrintViewController.swift in Sources */,
 				79FAF65B220B42F000A52D93 /* ScriptDataModel.swift in Sources */,
 				79FAF635220B3B3500A52D93 /* TaskPickerModel.swift in Sources */,
+				79F75CA42448A8190077551C /* eScriptModel.swift in Sources */,
 				79FAF636220B3B3500A52D93 /* criteriaViewController.swift in Sources */,
+				79F75CA82448ABA80077551C /* LetterheadPrinting.swift in Sources */,
 				79FAF651220B3FAB00A52D93 /* ChartData.swift in Sources */,
 				79FAF629220B36A900A52D93 /* LabsModel.swift in Sources */,
 				79FAF5DD220B2C3800A52D93 /* HydraVC.swift in Sources */,
 				79FAF64C220B3FAB00A52D93 /* NoteMedsVC.swift in Sources */,
 				79FAF61F220B33FB00A52D93 /* eScriptVC.swift in Sources */,
+				79F75CAB2448AD160077551C /* PatientData.swift in Sources */,
 				79FAF644220B3F8A00A52D93 /* ViewExtensions.swift in Sources */,
 				79FAF639220B3B3500A52D93 /* DataProcessingModel.swift in Sources */,
 				7934197F2215F8AD00194019 /* MainWindowController.swift in Sources */,
@@ -672,7 +696,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VY6BVT84SC;
 				INFOPLIST_FILE = Hydra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -680,7 +704,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fulgentwake.Hydra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -693,7 +717,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 4;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VY6BVT84SC;
 				INFOPLIST_FILE = Hydra/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -701,7 +725,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
-				MARKETING_VERSION = 1.2;
+				MARKETING_VERSION = 1.3;
 				PRODUCT_BUNDLE_IDENTIFIER = com.fulgentwake.Hydra;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -23,6 +23,10 @@ class LabsViewController: NSViewController {
     @IBOutlet weak var other2View: NSTextField!
     @IBOutlet weak var other2DxCombo: NSComboBox!
     
+    var lastNameID = String()
+    
+    var currentPatient = LabPatient(theText: "")
+    
     //Create an array of the tag number and string value for the fields in the lab box
     var labFields:[(Int, String?)] { return getTextfieldsIn(labBox)}
     
@@ -76,7 +80,7 @@ class LabsViewController: NSViewController {
         labView.clearControllers()
         populateComboboxSelectionsIn(labBox, Using: LabDxValues())
         //print("\n\n\n\(declinesFlu)\n\n\n")
-        populateComboboxSelectionsIn(fluBox, Using: FluComboboxValues())
+        //populateComboboxSelectionsIn(fluBox, Using: FluComboboxValues())
     }
     
     @IBAction func select90DayLabs(_ sender: Any) {
@@ -109,47 +113,7 @@ class LabsViewController: NSViewController {
         markSelectedLabs(selection)
     }
     
-    
-/*    @IBAction func processForNote(_ sender: Any) {
-        var resultsArray = [String]()
-        
-        if let fluResults = Labs().getFluShotStatusFrom(getButtonsIn(view: fluBox)) {
-            resultsArray.append(fluResults)
-        }
-        
-        if reviewedCheck.state == .on {
-            resultsArray.append("Lab results reviewed with patient during visit.")
-        }
-        
-        if let nextLab = labDueMatrix.selectedCell()?.title.lowercased() {
-            if fastingCheck.state == .on {
-                resultsArray.append("Fasting lab tests to be done \(nextLab).")
-            } else {
-                resultsArray.append("Lab tests to be done \(nextLab).")
-            }
-        }
-        
-        let processedLabs = processLabsForNote()
-        if !processedLabs.isEmpty {
-            if addOnCheck.state == .on {
-                resultsArray.append("Add on labs ordered: \(processedLabs.joined(separator: ", "))")
-            } else {
-            resultsArray.append("Labs ordered: \(processedLabs.joined(separator: ", "))")
-            }
-        }
 
-        theData.plan.addToExistingText(resultsArray.joined(separator: "\n"))
-        
-        let firstVC = presentingViewController as! ViewController
-        firstVC.theData = theData
-        currentPTVNDelegate?.returnPTVNValues(sender: self)
-        self.dismiss(self)
-    } */
-    
-//    @IBAction func processForPrint(_ sender: Any) {
-//
-//    }
-    
     //Marks a selection of labs in the lab box based on their tag
     //values received as the parameter.  Also sets the dx to
     //the second choice in the combo box
@@ -164,18 +128,58 @@ class LabsViewController: NSViewController {
             }
         }
     }
+    @IBAction func setUpLabPrinting(_ sender: Any?) {
+        let pasteBoard = NSPasteboard.general
+        guard let profileViewData = pasteBoard.string(forType: NSPasteboard.PasteboardType(rawValue: "public.utf8-plain-text")) else { return }
+        if !profileViewData.contains("SOCIAL SECURITY NUMBER")  || !profileViewData.contains("DOB:") {
+            let theAlert = NSAlert()
+            theAlert.messageText = "You need to copy the data from the Profile tab of the patient's chart in order to proceed.  Also, make sure to click the elipsis to show the date of birth."
+            theAlert.beginSheetModal(for: self.view.window!) { (NSModalResponse) -> Void in
+                let returnCode = NSModalResponse
+                print (returnCode)
+            }
+        } else {
+            currentPatient = LabPatient(theText: profileViewData)
+            print("MC1: \(currentPatient.medicare)")
+            performSegue(withIdentifier: "setUpPrintLabs", sender: self)
+        }
+    }
+    
+//    @IBAction func setUpLabPrinting(_ sender: Any?) {
+//        print("Opening Lab Printing Setup")
+//        //Make sure the user is on the Profile tab
+//        let pasteBoard = NSPasteboard.general
+//        guard let profileViewData = pasteBoard.string(forType: NSPasteboard.PasteboardType(rawValue: "public.utf8-plain-text")) else { return }
+//        if !profileViewData.contains("SOCIAL SECURITY NUMBER") {
+//            //Create an alert to let the user know they aren't on the Profile tab
+//            //After notifying the user, break out of the program
+//            let theAlert = NSAlert()
+//            theAlert.messageText = "You need to copy the data from the Profile tab of the patients chart in order to proceed."
+//            theAlert.beginSheetModal(for: self.view.window!) { (NSModalResponse) -> Void in
+//                let returnCode = NSModalResponse
+//                print(returnCode)}
+//            //Display warning and escape
+//            //return
+//        }
+//        print("Creating Patient")
+//        currentPatient = LabPatient(theText: profileViewData)
+//        print("Name: \(currentPatient.ptInnerName)")
+//        performSegue(withIdentifier: "setUpPrintLabs", sender: self)
+//    }
     
     
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        if segue.identifier! == "setUpPrintLabs" {
+        if segue.identifier == "setUpPrintLabs" {
+            print("Segueing")
             if let toViewController = segue.destinationController as? LabSetUpPrintViewController {
                 let processedLabs = processLabsForNote()
                 if !processedLabs.isEmpty {
                     toViewController.labPrintVersion = processLabsForPrint().joined(separator: "\n")
                     toViewController.labNoteVersion = "Labs ordered: \(processedLabs.joined(separator: ", "))"
                     toViewController.addOnResult = addOnCheck.state.rawValue
-                    //toViewController.ptDOB = theData.ptDOB
-                    //toViewController.ptName = theData.ptName
+                    toViewController.ptDOB = currentPatient.ptDOB
+                    toViewController.ptName = currentPatient.ptInnerName
+                    toViewController.MC = currentPatient.medicare
                 }
             }
         }
@@ -230,6 +234,9 @@ class LabsViewController: NSViewController {
             }
         }
     }
-	
+    
+    private func createPatientObject(withHandler handler: @escaping () -> Void) {
+	//Need Name, DOB, Whether MC is primary
 
+    }
 }

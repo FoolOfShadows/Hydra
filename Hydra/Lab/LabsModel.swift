@@ -8,7 +8,7 @@
 
 import Foundation
 
-let headerInfo = ("Whelchel Primary Care Medicine" + "\n" + "401 East Pinecrest, Marshall, TX  75670" + "\n" + "CPL Client #: 36686" + "\n" + "Phone: 903-935-7101     Fax: 903-935-7043")
+let headerInfo = (/*"Whelchel Primary Care Medicine" + "\n" + "401 East Pinecrest, Marshall, TX  75670" + "\n" + */"CPL Client #: 36686"/* + "\n" + "Phone: 903-935-7101     Fax: 903-935-7043"*/)
 
 var whereFlu = [""]
 var declinesFlu = [""]
@@ -17,6 +17,42 @@ protocol populateComboBoxProtocol {
     func matchValuesFrom(_ id:Int) -> [String]?
 }
 
+struct LabPatient {
+    var theText:String
+    var ptInnerName: String { return nameDOBMC(theText).0}
+    var ptLabelName: String {return getFileLabellingName(ptInnerName)}
+    var medicare: Bool {return nameDOBMC(theText).2}
+    var ptDOB: String { return nameDOBMC(theText).1}
+    
+    private func nameDOBMC(_ theText: String) -> (String, String, Bool){
+        var ptName = ""
+        var ptDOB = ""
+        var MC = false
+        let theSplitText = theText.components(separatedBy: "\n")
+        
+        var lineCount = 0
+        if !theSplitText.isEmpty {
+            for currentLine in theSplitText {
+                if currentLine.range(of: "PRN: ") != nil {
+                    ptName = theSplitText[lineCount - 1].replacingOccurrences(of: "(Inactive) ", with: "")
+                } else if currentLine.range(of: "DOB:") != nil {
+                    let dobLine = currentLine
+                    print("Raw DOB: \(dobLine)")
+                    ptDOB = dobLine.simpleRegExMatch("\\d./\\d./\\d\\d\\d\\d")
+                } else if currentLine.removeWhiteSpace() == "Primary" {
+                    let primaryInsLine = theSplitText[lineCount + 1]
+                    if primaryInsLine.contains("MEDICARE") {
+                        MC = true
+                    }
+                }
+                lineCount += 1
+            }
+        }
+        print(ptName, ptDOB, MC)
+        return (ptName, ptDOB, MC)
+        
+    }
+}
 
 struct Labs {
     func getOutputFor(_ id:Int) -> String? {
