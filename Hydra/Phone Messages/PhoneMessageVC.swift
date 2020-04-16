@@ -169,6 +169,7 @@ class PhoneMessageVC: NSViewController, scriptTableDelegate, symptomsDelegate, N
         schedulingCombo.clearComboBox(menuItems: resultsList)
         pharmacyCombo.clearComboBox(menuItems: pharmacies)
         resultsCombo.clearComboBox(menuItems: resultsList)
+        includeAllergiesCheckbox.state = .on
     }
     
     func currentMedsWillBeDismissed(sender: PMCurrentMedsController) {
