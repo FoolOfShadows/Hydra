@@ -130,9 +130,9 @@ func processTheFiles(_ theFiles:[URL]?, for type: SearchType) -> [VisitData] {
 }
 
 func getVisitDate(_ theText:String) -> Date {
-    //print(theText)
+    //print("The Text is\n\(theText)")
     let stringDate = simpleRegExMatch(theText, theExpression: "(?s)#VISITDATE.*VISITDATE#").cleanTheTextOf(["#VISITDATE","VISITDATE#"])
-    //print(stringDate)
+    print("The date is\n\(stringDate)")
     let dateFormatter = DateFormatter()
     dateFormatter.dateFormat = "MM/dd/yy"
     //print(dateFormatter.date(from: stringDate))

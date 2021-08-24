@@ -72,7 +72,7 @@ class eScriptVC: NSViewController {
 		let labelRequestDate = labelDateFormatter.string(from: requestDate)
 		
 		let savePath = NSHomeDirectory()
-		let saveLocation = "WPCMSharedFiles/zBertha Review/01 The Script Corral"
+		let saveLocation = "Sync/WPCMSharedFiles/zBertha Review/01 The Script Corral"
 		
 		let saveDialog = NSSavePanel()
 		saveDialog.nameFieldStringValue = "\(fileLabelName) RXCOM \(labelRequestDate)"

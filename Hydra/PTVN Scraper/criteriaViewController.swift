@@ -59,9 +59,9 @@ class criteriaViewController: NSViewController {
 		var originFolderURL: URL
 		switch selectorTag {
 		case 0:
-			originFolderURL = URL(fileURLWithPath: "\(basePath)/WPCMSharedFiles/zDoctor Review/06 Dummy Files")
+			originFolderURL = URL(fileURLWithPath: "\(basePath)/Sync/WPCMSharedFiles/zDoctor Review/06 Dummy Files")
 		default:
-			originFolderURL = URL(fileURLWithPath: "\(basePath)/WPCMSharedFiles/zDonna Review/01 PTVN Files")
+			originFolderURL = URL(fileURLWithPath: "\(basePath)/Sync/WPCMSharedFiles/zDonna Review/01 PTVN Files")
 		}
 		
         //print("OriginFolder set to: \(originFolderURL)")
